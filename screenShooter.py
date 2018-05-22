@@ -27,11 +27,7 @@ class Screenshooter():
     def connect(self):
         print('Connecting to S3')
         self.s3 = boto3.resource('s3', aws_access_key_id=self.KEY_ID, aws_secret_access_key=self.ACCESS_KEY,config=Config(signature_version='s3v4'))
-        try:
-            self.conn = CloudFrontConnection(self.KEY_ID, self.ACCESS_KEY)
-        except:
-            print('Connection Failed')
-
+        
     def uploadFilesToS3(self, path, keyPath):
         path = path.replace('\\', '/')
         if os.path.isfile(path):
