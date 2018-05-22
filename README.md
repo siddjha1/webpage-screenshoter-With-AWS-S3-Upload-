@@ -6,7 +6,9 @@ This code can be used in order to automate the firefox browser, make it navigate
 The code also has Python functions to upload the Thumbnails to an AWS s3 location.
 
 The technology stack used in this Python Program includes the following
-  Python (3.6.2)
+
+  1) Python (3.6.2)
+
 Python packages needed are
   1) selenium
   2) boto3
